@@ -3,7 +3,7 @@
  }
  
  .imagem{
-     background-image: url(https://i.pinimg.com/originals/a2/ae/58/a2ae589aacace249f52c927ea38e7e16.png);
+     background-image: url(https://th.bing.com/th/id/R.e153cf79403608c20fbbbd7c90eefc21?rik=odV8lJwjepQiww&riu=http%3a%2f%2fwww.obt.inpe.br%2fOBT%2fnoticias-obt-inpe%2fsoftware-desenvolvido-pelo-inpe-simula-a-trajetoria-da-lama-no-colapso-da-barragem-em-brumadinho-mg%2fCBERS4_PAN10_20190129_Bruma.jpeg&ehk=Rvh9nxyEkOGit2jrcVi7RNBPZlbuoTHoVAMQnCGSRDY%3d&risl=&pid=ImgRaw&r=0);
      background-repeat: no-repeat;
      width: 100vh;
      min-height: 100vh;
@@ -14,3 +14,7 @@
  .text-decorator-none{
      text-decoration: none;
  }
+.botaologar{
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 49, 169);
+}
