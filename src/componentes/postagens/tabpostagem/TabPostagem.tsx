@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
-import { AppBar, Tab, Tabs, Typography, Box } from '@material-ui/core';
+import { AppBar, Tab, Tabs, Typography, Box, Button } from '@material-ui/core';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import ListaPostagem from '../listapostagem/ListaPostagem';
 import './TabPostagem.css';
+import InstagramIcon from "@material-ui/icons/Instagram";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 
 function TabPostagem() {
@@ -25,8 +28,38 @@ function TabPostagem() {
           </Box>
         </TabPanel>
         <TabPanel value="2">
-          <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ut eveniet natus totam et, voluptate dicta tempore alias, odio nobis non eius cupiditate minima inventore pariatur! Ipsum itaque consectetur voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit consequuntur suscipit fugiat, nam quis quod quaerat veritatis et, vel ratione beatae, facere neque! Quo animi porro voluptate saepe deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci, officia aut quidem dolorum deserunt iure dolorem doloribus velit nobis quas consequatur at ullam odit, nesciunt est nulla nihil excepturi!</Typography>
+        <Box className="card-fulano2">
+          <img
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQHNu4WbuKYSDw/profile-displayphoto-shrink_800_800/0/1658838501880?e=1665014400&v=beta&t=YbLPVFJjH0dwqqBceA_yFtrxaNifoK1J0rZfmtNnppw"
+            alt="avatar"
+            className="avatar"
+          />
+          <Box className="card-fulano-text">
+            <Button variant="text" className="botao-nav">
+              Isabella
+            </Button>
+            <Box className="parte-texto-icones">
+              <Typography
+                variant="body2"
+                className="text-sobrenos">
+                Engenheira Cartógrafa e Agrimensora pela UNESP, Desenvolvedora Jr. pela Generation
+                Brasil, estudante de Análise e Desenvolvimento de Sistemas e mestranda na area de
+                agricultura de precisão na UNICAMP
+              </Typography>
+              <Box className="redessociais">
+                <a href="https://www.linkedin.com/in/isabella-alves-da-cunha-a110011b9/overlay/contact-info/" target="_blank" rel="noopener noreferrer"  className="redessociais">
+                  <InstagramIcon className="footer-icon redes-icon" />
+                </a>
+                <a href="https://github.com/isaacunha" target="_blank" rel="noopener noreferrer"  className="redessociais">
+                  <GitHubIcon className="footer-icon redes-icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/isabella-alves-da-cunha-a110011b9/" target="_blank" rel="noopener noreferrer"  className="redessociais">
+                  <LinkedInIcon className="footer-icon redes-icon" />
+                </a>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
         </TabPanel>
       </TabContext>
     </>

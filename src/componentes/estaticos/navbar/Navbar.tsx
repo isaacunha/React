@@ -1,10 +1,21 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box, Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom'
+import useLocalStorage from 'react-use-localstorage'
 import './Navbar.css'
 import Button from '@material-ui/core/Button';
 
 function Navbar() {
+    const [token, setToken] = useLocalStorage('token');
+    let navigate = useNavigate();
+    
+    function goLogout(){
+        setToken('')
+        alert("Usuário deslogado!")
+       navigate('/login')
+    }
+
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
@@ -15,34 +26,47 @@ function Navbar() {
                         </Box>
 
                         <Box className='box4' display="flex" justifyContent="center" >
+                            <Link to="/home" className='text-decoration-none'>
                             <Typography variant="h5" color="inherit">
                                 SensoAgriTech
                             </Typography>
+                            </Link>
+                            
+                            <Link to="/home" className='text-decoration-none'>
                             <Box mx={1} className='cursor'>
                                 <Button variant="contained" className="botao1">
                                     Home
                                 </Button>
                             </Box>
+                            </Link>
+
+                            <Link to="/posts" className='text-decoration-none'>
                             <Box mx={1} className='cursor'>
                                 <Button variant="contained" className="botao1">
                                     Postagens
                                 </Button>
                             </Box>
+                            </Link>
+                            
+                            <Link to="/temas" className='text-decoration-none'>
                             <Box mx={1} className='cursor'>
                                 <Button variant="contained" className="botao1">
                                     temas
                                 </Button>
                             </Box>
+                            </Link>
+
+                            <Link to="/formulariotema" className='text-decoration-none'>
                             <Box mx={1} className='cursor'>
                                 <Button variant="contained" className="botao1">
                                     Cadastrar Tema
                                 </Button>
                             </Box>
-                            <Box mx={1} className='cursor'>
+                            </Link>
+
+                            <Box mx={1} className='cursor' onClick={goLogout} >
                                 <Button variant="contained" className="botao1">
-                                    <Link to='/login' className='text-decorator-none'>
                                             logout
-                                    </Link>
                                 </Button>
                             </Box>
 
